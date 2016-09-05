@@ -16,13 +16,14 @@
 ```
 
 ```
-##html
-	####www/my-add-news.html
-	####my-add-new.js
+	www/my-add-news.html
+	my-add-new.js
 ```
 
 ```
-	####my-add-new.js
+	
+
+
 	var http = require('http');
 		var mysql = require('mysql');
 		var fs = require('fs');
