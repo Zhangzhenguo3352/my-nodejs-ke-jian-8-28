@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "重要的是通过mysply + node  实现了 , 注册登录",
+  "main": "0-upload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhangzhenguo3352/my-nodejs-ke-jian-8-28.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhangzhenguo3352/my-nodejs-ke-jian-8-28/issues"
+  },
+  "homepage": "https://github.com/Zhangzhenguo3352/my-nodejs-ke-jian-8-28#readme",
+  "dependencies": {
+    "mysql": "^2.11.1"
+  }
+}

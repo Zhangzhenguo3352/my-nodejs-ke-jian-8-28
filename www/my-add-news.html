@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="lib/ajax.js"></script>
+</head>
+<script>
+	window.onload=function(){
+		var oIp_1 = document.getElementById('title');
+		var oIp_2 = document.getElementById('href');
+		var zhuCe = document.getElementById('zhuCe');
+		var dengLu = document.getElementById('dengLu');
+		var oBtn = document.getElementById('btn1');
+		var oBtn2 = document.getElementById('btn2');
+		// 获取数据
+		oBtn.onclick=function(){
+			ajax({
+				url:'news',
+				data:{
+					act:'get'
+				},
+				success:function(data){
+					alert(data)
+				}
+			})
+		};
+		// 添加数据
+		oBtn2.onclick=function(){
+			ajax({
+				url:'news',
+				data:{
+					act:'add',
+					title:oIp_1.value,
+					href:oIp_2.value
+				},
+				success:function(data2){
+					alert(data2)
+				}
+			})
+		}
+		// 注册用户
+		zhuCe.onclick=function(){
+			ajax({
+				url:'news',
+				data:{
+					act:'user-add',
+					title:oIp_1.value,
+					href:oIp_2.value
+				},
+				success:function(data4){
+					alert(data4)
+				}
+			})
+		};
+		// 登录用户
+		dengLu.onclick=function(){
+			ajax({
+				url:'news',
+				data:{
+					act:'user-login',
+					title:oIp_1.value,
+					href:oIp_2.value
+				},
+				success:function(data3){
+					alert(data3)
+				}
+			})
+		};
+	}
+</script>
+<body>
+	
+	<h2>my 添加新闻</h2>
+	title:
+	<input type="text" id="title"><br>
+	href:
+	<input type="text" id="href"><br>
+	<input type="button" value="注册" id="zhuCe">
+	<input type="button" value="登录" id="dengLu">
+
+	<input type="button" value="获取、数据" id="btn1">
+	<input type="button" value="添加、数据" id="btn2">
+</body>
+</html>

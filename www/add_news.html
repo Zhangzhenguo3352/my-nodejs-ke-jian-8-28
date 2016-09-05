@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+    <script src="lib/ajax.js"></script>
+    <script>
+        window.onload=function(){
+            var oT=document.getElementById('t1');
+            var oT2=document.getElementById('t2');
+            var oBtn=document.getElementById('btn1');
+            var oBtn2=document.getElementById('btn2');
+
+            oBtn.onclick=function(){
+                ajax({
+                    url:'news',
+                    data:{
+                        act:'add',
+                        title:oT.value,
+                        href:oT2.value
+                    },
+                    success:function(str){
+                        alert(str);
+                    }
+                });
+            };
+             oBtn2.onclick=function(){
+                ajax({
+                    url:'news',
+                    data:{
+                        act:'get',
+                        title:oT.value,
+                        href:oT2.value
+                    },
+                    success:function(str){
+                        alert(str);
+                    }
+                });
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h3>添加新闻页面</h3>
+        title:
+        <input type="text" id="t1">
+        <br>
+        href:
+        <input type="text" id="t2">
+        <br>
+        <input type="button" value="添加" id="btn1">
+        <input type="button" value="获取新闻弹出来" id="btn2">
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
